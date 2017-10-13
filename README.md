@@ -1,4 +1,4 @@
-blog decoded v1
+blog decoded v1.0
 
 
 
