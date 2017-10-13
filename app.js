@@ -180,10 +180,19 @@ app.get ("/", function(req, res){
     });
   });
 
+// Check hostname
+var os = require("os");
+var hostname = os.hostname();
 
-
+console.log (hostname);
 
 // Server 
+if (hostname==="kajnes-blog-decoded-5399218"){
 app.listen(process.env.PORT, process.env.IP, function(){
-    console.log ("decoded blog is running.....")
+
+
+      console.log ("decoded blog is running.....");
 });
+} else{
+  console.log ("decoded blog ERROR starting the server.....");
+}
