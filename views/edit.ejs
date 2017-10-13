@@ -1,0 +1,41 @@
+<% include ./partials/header %>
+<div class="ui main text container segment">
+    <div class="ui huge header">Edycja wpisu: <%= post.title %></div>
+
+        <form class="ui form" action="/admin/<%= post._id %>?_method=PUT" method="POST">
+            
+            <div class="field">
+                <label>Tytuł</label>
+                <input type="text" name="post[title]" value="<%= post.title %>">
+            </div>
+            
+            <div class="field">
+                <label>Obrazek</label>
+                <input type="text" name="post[image]" value="<%= post.image %>">
+            </div>
+            <div class="field">
+                <label>Lead</label>
+                <textarea name="post[lead]"><%= post.lead %></textarea>
+            </div>
+            <div class="field">
+                <label>Treść</label>
+                <textarea name="post[body]"><%= post.body %></textarea>
+            </div>
+            
+            <div class="field">
+                <label>Kategoria</label>
+                <input type="text" name="post[category]" value="<%= post.category %>">
+            </div>
+            
+            <div class="field">
+                <label>Słowa kluczowe</label>
+                <input type="text" name="post[keywords]" value="<%= post.keywords %>">
+            </div>
+            
+            <input class="ui violet button" type="submit" value="Zapisz">
+            
+        </form>
+
+    </div>
+
+<% include ./partials/footer %>

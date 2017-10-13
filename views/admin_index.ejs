@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+<div class="ui main text container segment">
+    <div class="ui huge header">ADMIN PANEL</div>
+
+
+<% posts.forEach(function(post){   %>
+
+<div>
+ <p>  <%= post.title %> </p><a class="mini ui blue basic button" href="/<%= post.slug %>" target="_blank">Podgląd</a> <a class="mini ui green basic button" href="/admin/<%= post._id %>/edit">Edytuj</a>  
+   
+   <form style="display: inline-block;" action="/admin/<%= post._id %>?_method=DELETE" method="POST">
+       <button class="mini ui red basic button">Skasuj</button>
+   </form>
+   
+   
+</div>
+<div class="ui section divider"></div>
+<% }) %>
+
+</div>
+
+
+
+
+
+<% include ./partials/footer %>

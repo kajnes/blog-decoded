@@ -1,0 +1,42 @@
+<% include ./partials/header %>
+<div class="ui main text container segment">
+    <div class="ui huge header">Nowy wpis</div>
+
+        <form class="ui form" action="/admin/" method="POST">
+            
+            <div class="field">
+                <label>Tytuł</label>
+                <input type="text" name="post[title]" placeholder="tytuł wpisu">
+            </div>
+            <div class="field">
+                <label>Obrazek</label>
+                <input type="text" name="post[image]" placeholder="obrazek">
+            </div>
+            <div class="field">
+                <label>Lead</label>
+                <textarea name="post[lead]"></textarea>
+            </div>
+            <div class="field">
+                <label>Treść</label>
+                <textarea name="post[body]"></textarea>
+            </div>
+            
+            <div class="field">
+                <label>Kategoria</label>
+                <input type="text" name="post[category]" placeholder="kategoria">
+            </div>
+            
+            <div class="field">
+                <label>Słowa kluczowe</label>
+                <input type="text" name="post[keywords]" placeholder="słowa kluczowe">
+            </div>
+            
+            <input class="ui positive button" type="submit" value="Dodaj">
+            
+        </form>
+
+    </div>
+
+<% include ./partials/footer %>
+
+

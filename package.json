@@ -1,0 +1,19 @@
+{
+  "name": "blog-engine",
+  "version": "1.0.0",
+  "description": "Blog engine",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcin Piekarski",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "method-override": "^2.3.10",
+    "mongoose": "^4.11.12",
+    "monguurl": "^0.1.0"
+  }
+}
