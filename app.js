@@ -187,12 +187,21 @@ var hostname = os.hostname();
 console.log (hostname);
 
 // Server 
-if (hostname==="kajnes-blog-decoded-5399218"){
+if (hostname==="kajnes-blog-decoded-5399218"){  //c9 server
 app.listen(process.env.PORT, process.env.IP, function(){
 
 
       console.log ("decoded blog is running.....");
 });
-} else{
+} 
+if (hostname==="leeloo"){  //leeloo server
+app.listen(8080, "127.0.0.1", function(){
+
+      console.log ("decoded blog is running.....");
+});
+} 
+
+
+else{
   console.log ("decoded blog ERROR starting the server.....");
 }
